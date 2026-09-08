@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "teaching": "Teaching",
+    "research": "Research",
+    "publications": "Publications",
+    "stack": "Stack",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Software Engineering · Academia · AI Research",
+    "titleLine1": "I build large-scale software.",
+    "titleLine2": "I teach technology with rigor.",
+    "titleLine3": "I research what comes next.",
+    "subtitle": "Senior Software Engineer, University Professor, and Researcher operating at the convergence of distributed architectures, security, and artificial intelligence applied to computing education.",
+    "ctaProjects": "Explore Selected Projects",
+    "ctaCv": "Download Curriculum Vitae",
+    "ctaContact": "Get in Touch"
+  },
+  "metrics": {
+    "title": "Impact & Track Record",
+    "subtitle": "Consolidated indicators across academic and industrial milestones",
+    "yearsExp": "Years in Engineering",
+    "students": "Students Mentored & Taught",
+    "courses": "University Courses Taught",
+    "projects": "Enterprise & OSS Projects",
+    "publications": "Peer-Reviewed Publications",
+    "certifications": "Technical Certifications",
+    "placeholderNotice": "Indicators marked with XX+ await official confirmation by Alexsander Farias."
+  },
+  "selectedWork": {
+    "badge": "Engineering in Practice",
+    "title": "Selected Projects",
+    "subtitle": "In-depth case studies dissecting real problems, architectural decisions, metrics, and trade-offs.",
+    "viewCaseStudy": "Read Full Case Study",
+    "viewAll": "View All Projects"
+  },
+  "homeManifesto": {
+    "badge": "Engineering Philosophy",
+    "title": "Beyond syntax: architecture, resilience, and educational mission",
+    "p1": "Modern software engineering requires going beyond transient frameworks. My practice is grounded in durable engineering principles: strict separation of concerns, explicit contracts, proactive security by design, and continuous observability.",
+    "p2": "In the university lecture hall, I translate complex distributed systems into accessible pedagogical methodologies, mentoring the next generation of engineers. In research, I investigate how AI can elevate computer science education and software reliability."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "engineeringTag": "Engineered with Next.js (App Router), Modular Monolith & Spec-Driven Development.",
+    "builtBy": "alexsanderfarias.dev"
+  }
+}

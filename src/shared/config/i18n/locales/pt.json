@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "teaching": "Docência",
+    "research": "Pesquisa",
+    "publications": "Publicações",
+    "stack": "Stack",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "hero": {
+    "badge": "Engenharia de Software · Docência · Pesquisa em IA",
+    "titleLine1": "Construo software de alta escala.",
+    "titleLine2": "Ensino computação com rigor.",
+    "titleLine3": "Pesquiso o que vem a seguir.",
+    "subtitle": "Engenheiro de Software sênior, Professor universitário e Pesquisador focado na intersecção entre arquiteturas distribuídas, segurança e inteligência artificial aplicada à educação.",
+    "ctaProjects": "Explorar Projetos Selecionados",
+    "ctaCv": "Baixar CV Profissional",
+    "ctaContact": "Entrar em Contato"
+  },
+  "metrics": {
+    "title": "Impacto & Trajetória",
+    "subtitle": "Indicadores consolidados ao longo da carreira acadêmica e industrial",
+    "yearsExp": "Anos de Engenharia",
+    "students": "Alunos Formados & Orientados",
+    "courses": "Disciplinas Ministradas",
+    "projects": "Projetos Corporativos & Open Source",
+    "publications": "Publicações Científicas",
+    "certifications": "Certificações Técnicas",
+    "placeholderNotice": "Dados identificados com XX+ aguardam homologação oficial de Alexsander Farias."
+  },
+  "selectedWork": {
+    "badge": "Engenharia em Prática",
+    "title": "Projetos em Destaque",
+    "subtitle": "Estudos de caso aprofundados detalhando problemas reais, decisões arquiteturais, métricas e trade-offs.",
+    "viewCaseStudy": "Ver Case Study Completo",
+    "viewAll": "Ver Todos os Projetos"
+  },
+  "homeManifesto": {
+    "badge": "Filosofia de Engenharia",
+    "title": "Além do código: arquitetura, resiliência e propósito educacional",
+    "p1": "O desenvolvimento de software moderno exige ir além de frameworks efêmeros. Minha atuação é fundamentada em princípios clássicos de engenharia: separação rigorosa de responsabilidades, contratos bem definidos, segurança proativa por design e observabilidade contínua.",
+    "p2": "Na sala de aula do ensino superior, traduzo sistemas complexos em metodologias acessíveis, formando novos engenheiros capazes de pensar criticamente. Na pesquisa, investigo como a Inteligência Artificial pode potencializar a aprendizagem de programação e a confiabilidade de sistemas."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "engineeringTag": "Projetado com Next.js (App Router), Modular Monolith & Spec-Driven Development.",
+    "builtBy": "alexsanderfarias.dev"
+  }
+}
