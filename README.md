@@ -1,6 +1,6 @@
 # alexsanderfarias.dev - Plataforma Profissional & Hub Acadêmico
 
-> **Produção:** [https://alexsanderfarias.dev](https://alexsanderfarias-dev.vercel.app)  
+> **Produção:** [https://alexsanderfarias-dev.vercel.app](https://alexsanderfarias-dev.vercel.app)  
 > **Autor:** Alexsander Farias (Software Engineer · Professor · Researcher · Systems Architect)  
 > **Arquitetura:** Modular Monolith orientado a domínios sobre Next.js App Router & Vercel Edge Network  
 > **Filosofia:** Spec-Driven Development (SDD) & Security by Design (OWASP Top 10)
