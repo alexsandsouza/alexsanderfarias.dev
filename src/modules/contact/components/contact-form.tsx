@@ -33,10 +33,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
           <Badge variant="accent">
             {isPt ? "Comunicação Segura & Formal" : "Secure & Formal Communication"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
             {isPt ? "Entre em Contato" : "Get in Touch"}
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {isPt
               ? "Disponível para consultorias em arquitetura de sistemas, palestras técnicas, projetos de pesquisa em IA e colaborações acadêmicas."
               : "Available for systems architecture advisory, technical keynotes, applied AI research, and academic collaborations."}
@@ -48,11 +48,11 @@ export function ContactForm({ locale }: { locale: Locale }) {
           <div className="lg:col-span-7">
             <div className="rounded-xl bg-surface border border-border-subtle p-8 space-y-6">
               <div className="flex items-center justify-between border-b border-border-subtle pb-4">
-                <div className="flex items-center gap-2 text-sm font-semibold text-slate-100 font-display">
+                <div className="flex items-center gap-2 text-sm font-semibold text-fg font-display">
                   <Mail className="h-4 w-4 text-accent" />
                   <span>{isPt ? "Mensagem Criptografada & Segura" : "Secure Encrypted Transmission"}</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                <div className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
                   <Lock className="h-3 w-3" />
                   <span>Server-Validated</span>
                 </div>
@@ -61,7 +61,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
               {/* Feedback de Sucesso */}
               {state?.success && (
                 <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-start gap-3 text-emerald-300 text-sm">
-                  <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-5 w-5 text-emerald-700 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
                   <p>{state.message}</p>
                 </div>
               )}
@@ -90,7 +90,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Nome */}
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-xs font-mono font-medium text-slate-300">
+                    <label htmlFor="name" className="text-xs font-mono font-medium text-fg-secondary">
                       {isPt ? "Seu Nome Completo" : "Full Name"} *
                     </label>
                     <input
@@ -99,7 +99,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                       name="name"
                       required
                       placeholder="Ex: Dra. Mariana Silva"
-                      className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                      className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-fg placeholder:text-fg-muted outline-none transition-all"
                     />
                     {state?.errors?.name && (
                       <p className="text-xs text-rose-400 font-mono">
@@ -110,7 +110,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
                   {/* E-mail */}
                   <div className="space-y-1.5">
-                    <label htmlFor="email" className="text-xs font-mono font-medium text-slate-300">
+                    <label htmlFor="email" className="text-xs font-mono font-medium text-fg-secondary">
                       {isPt ? "E-mail Corporativo / Pessoal" : "Email Address"} *
                     </label>
                     <input
@@ -119,7 +119,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                       name="email"
                       required
                       placeholder="nome@empresa.com"
-                      className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                      className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-fg placeholder:text-fg-muted outline-none transition-all"
                     />
                     {state?.errors?.email && (
                       <p className="text-xs text-rose-400 font-mono">
@@ -131,7 +131,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
                 {/* Assunto */}
                 <div className="space-y-1.5">
-                  <label htmlFor="subject" className="text-xs font-mono font-medium text-slate-300">
+                  <label htmlFor="subject" className="text-xs font-mono font-medium text-fg-secondary">
                     {isPt ? "Assunto / Tópico" : "Subject / Topic"} *
                   </label>
                   <input
@@ -140,7 +140,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                     name="subject"
                     required
                     placeholder="Ex: Convite para Keynote / Consultoria Técnica"
-                    className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-slate-100 placeholder-slate-600 outline-none transition-all"
+                    className="w-full h-11 px-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-fg placeholder:text-fg-muted outline-none transition-all"
                   />
                   {state?.errors?.subject && (
                     <p className="text-xs text-rose-400 font-mono">
@@ -151,7 +151,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
 
                 {/* Mensagem */}
                 <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-xs font-mono font-medium text-slate-300">
+                  <label htmlFor="message" className="text-xs font-mono font-medium text-fg-secondary">
                     {isPt ? "Mensagem Detalhada" : "Detailed Message"} *
                   </label>
                   <textarea
@@ -164,7 +164,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
                         ? "Descreva o contexto, prazos ou especificações técnicas da sua demanda..."
                         : "Describe the context, timeline, or technical scope of your inquiry..."
                     }
-                    className="w-full p-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-slate-100 placeholder-slate-600 outline-none transition-all resize-y"
+                    className="w-full p-3.5 rounded-lg bg-canvas border border-border-subtle focus:border-accent focus:ring-1 focus:ring-accent text-sm text-fg placeholder:text-fg-muted outline-none transition-all resize-y"
                   />
                   {state?.errors?.message && (
                     <p className="text-xs text-rose-400 font-mono">
@@ -198,10 +198,10 @@ export function ContactForm({ locale }: { locale: Locale }) {
           {/* Coluna de Canais Oficiais */}
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-xl bg-surface border border-border-subtle p-6 space-y-4">
-              <h2 className="text-lg font-bold text-slate-100 font-display">
+              <h2 className="text-lg font-bold text-fg font-display">
                 {isPt ? "Canais de Comunicação Direta" : "Direct Official Channels"}
               </h2>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-fg-secondary leading-relaxed">
                 {isPt
                   ? "Para correspondências acadêmicas, convites de bancas examinadoras ou oportunidades de engenharia."
                   : "For academic correspondence, thesis committee invitations, or software advisory."}
@@ -210,12 +210,12 @@ export function ContactForm({ locale }: { locale: Locale }) {
               <div className="space-y-3 pt-2">
                 <a
                   href={`mailto:${siteConfig.links.email}`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-200 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg transition-colors"
                 >
                   <Mail className="h-5 w-5 text-accent flex-shrink-0" />
                   <div className="text-xs font-mono truncate">
-                    <p className="text-slate-400">E-mail Oficial</p>
-                    <p className="text-slate-200 font-semibold">{siteConfig.links.email}</p>
+                    <p className="text-fg-secondary">E-mail Oficial</p>
+                    <p className="text-fg font-semibold">{siteConfig.links.email}</p>
                   </div>
                 </a>
 
@@ -223,12 +223,12 @@ export function ContactForm({ locale }: { locale: Locale }) {
                   href={siteConfig.links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-200 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg transition-colors"
                 >
                   <Linkedin className="h-5 w-5 text-accent flex-shrink-0" />
                   <div className="text-xs font-mono">
-                    <p className="text-slate-400">LinkedIn</p>
-                    <p className="text-slate-200 font-semibold">linkedin.com/in/alexsanderfarias</p>
+                    <p className="text-fg-secondary">LinkedIn</p>
+                    <p className="text-fg font-semibold">linkedin.com/in/alexsanderfarias</p>
                   </div>
                 </a>
 
@@ -236,12 +236,12 @@ export function ContactForm({ locale }: { locale: Locale }) {
                   href={siteConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-200 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg transition-colors"
                 >
                   <Github className="h-5 w-5 text-accent flex-shrink-0" />
                   <div className="text-xs font-mono">
-                    <p className="text-slate-400">GitHub</p>
-                    <p className="text-slate-200 font-semibold">github.com/alexsandsouza</p>
+                    <p className="text-fg-secondary">GitHub</p>
+                    <p className="text-fg font-semibold">github.com/alexsandsouza</p>
                   </div>
                 </a>
 
@@ -249,21 +249,21 @@ export function ContactForm({ locale }: { locale: Locale }) {
                   href={siteConfig.links.lattes}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-200 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg transition-colors"
                 >
                   <BookOpen className="h-5 w-5 text-accent flex-shrink-0" />
                   <div className="text-xs font-mono">
-                    <p className="text-slate-400">Currículo Lattes</p>
-                    <p className="text-slate-200 font-semibold">Plataforma Lattes (CNPq)</p>
+                    <p className="text-fg-secondary">Currículo Lattes</p>
+                    <p className="text-fg font-semibold">Plataforma Lattes (CNPq)</p>
                   </div>
                 </a>
               </div>
             </div>
 
             {/* Garantia de Privacidade e Segurança */}
-            <div className="rounded-xl bg-surface/50 border border-border-subtle p-6 space-y-3 text-xs font-mono text-slate-400">
-              <div className="flex items-center gap-2 text-slate-200 font-semibold">
-                <ShieldCheck className="h-4 w-4 text-emerald-400" />
+            <div className="rounded-xl bg-surface/50 border border-border-subtle p-6 space-y-3 text-xs font-mono text-fg-secondary">
+              <div className="flex items-center gap-2 text-fg font-semibold">
+                <ShieldCheck className="h-4 w-4 text-emerald-700 dark:text-emerald-400" />
                 <span>Privacidade & DevSecOps</span>
               </div>
               <p className="leading-relaxed">

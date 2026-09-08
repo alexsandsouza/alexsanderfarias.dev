@@ -16,10 +16,10 @@ export default function NotFound() {
             <span className="text-xs font-mono text-accent uppercase tracking-widest">
               Error 404 · Resource Not Found
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-100 font-display">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-fg font-display">
               Página Não Encontrada
             </h1>
-            <p className="text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-fg-secondary max-w-md mx-auto leading-relaxed">
               O recurso solicitado não existe ou foi realocado. Verifique a URL ou retorne à página inicial.
             </p>
           </div>

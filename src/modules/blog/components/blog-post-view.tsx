@@ -22,7 +22,7 @@ export function BlogPostView({
         <div className="mb-8">
           <Link
             href={`/${locale}/blog`}
-            className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono text-fg-secondary hover:text-accent transition-colors"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>{isPt ? "Voltar ao Blog" : "Back to Blog"}</span>
@@ -33,15 +33,15 @@ export function BlogPostView({
         <header className="space-y-6 pb-10 border-b border-border-subtle">
           <Badge variant="accent">{post.category.toUpperCase()}</Badge>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-100 font-display leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-fg font-display leading-tight">
             {post.title}
           </h1>
 
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-fg-secondary leading-relaxed">
             {post.description}
           </p>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs font-mono text-slate-400 pt-2 border-t border-border-subtle/60">
+          <div className="flex flex-wrap items-center gap-6 text-xs font-mono text-fg-secondary pt-2 border-t border-border-subtle/60">
             <div className="flex items-center gap-1.5">
               <Calendar className="h-3.5 w-3.5 text-accent" />
               <span>{formatDate(post.publishedAt, isPt ? "pt-BR" : "en-US")}</span>
@@ -53,10 +53,10 @@ export function BlogPostView({
             </div>
 
             <div className="flex items-center gap-2">
-              <Tag className="h-3.5 w-3.5 text-slate-500" />
+              <Tag className="h-3.5 w-3.5 text-fg-muted" />
               <div className="flex gap-1.5">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="text-slate-400">
+                  <span key={tag} className="text-fg-secondary">
                     #{tag}
                   </span>
                 ))}
@@ -66,18 +66,18 @@ export function BlogPostView({
         </header>
 
         {/* Conteúdo do Artigo */}
-        <div className="pt-12 prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-6 font-sans">
+        <div className="pt-12 max-w-none text-fg-secondary leading-relaxed space-y-6 font-sans">
           {post.content.split("\n\n").map((block, idx) => {
             if (block.startsWith("### ")) {
               return (
-                <h3 key={idx} className="text-xl font-bold text-slate-100 font-display pt-4">
+                <h3 key={idx} className="text-xl font-bold text-fg font-display pt-4">
                   {block.replace("### ", "")}
                 </h3>
               );
             }
             if (block.startsWith("## ")) {
               return (
-                <h2 key={idx} className="text-2xl font-bold text-slate-100 font-display pt-6 border-b border-border-subtle pb-2">
+                <h2 key={idx} className="text-2xl font-bold text-fg font-display pt-6 border-b border-border-subtle pb-2">
                   {block.replace("## ", "")}
                 </h2>
               );
@@ -94,7 +94,7 @@ export function BlogPostView({
               );
             }
             return (
-              <p key={idx} className="text-base text-slate-300 leading-relaxed">
+              <p key={idx} className="text-base text-fg-secondary leading-relaxed">
                 {block}
               </p>
             );
@@ -102,7 +102,7 @@ export function BlogPostView({
         </div>
 
         {/* Rodapé do Artigo */}
-        <footer className="mt-16 pt-8 border-t border-border-subtle flex items-center justify-between text-xs font-mono text-slate-400">
+        <footer className="mt-16 pt-8 border-t border-border-subtle flex items-center justify-between text-xs font-mono text-fg-secondary">
           <Link
             href={`/${locale}/blog`}
             className="inline-flex items-center gap-2 text-accent hover:text-sky-300 transition-colors"

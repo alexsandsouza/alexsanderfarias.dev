@@ -13,12 +13,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        "bg-surface-elevated hover:bg-surface-hover text-slate-100 border border-border-subtle hover:border-border-muted shadow-sm",
+        "bg-surface-elevated hover:bg-surface-hover text-fg border border-border-subtle hover:border-border-muted shadow-sm",
       secondary:
-        "bg-surface hover:bg-surface-elevated text-slate-300 hover:text-white border border-transparent",
+        "bg-surface hover:bg-surface-elevated text-fg-secondary hover:text-fg border border-transparent",
       outline:
-        "border border-border-subtle hover:border-accent/40 text-slate-300 hover:text-white bg-transparent",
-      ghost: "hover:bg-surface-elevated text-slate-400 hover:text-slate-100",
+        "border border-border-subtle hover:border-accent/40 text-fg-secondary hover:text-fg bg-transparent",
+      ghost: "hover:bg-surface-elevated text-fg-secondary hover:text-fg",
       cyan:
         "bg-accent hover:bg-accent-hover text-canvas font-semibold shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:shadow-[0_0_25px_rgba(0,229,255,0.4)]",
     };

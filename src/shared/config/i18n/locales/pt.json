@@ -12,14 +12,23 @@
     "contact": "Contato"
   },
   "hero": {
-    "badge": "Dev Full Stack · Professor Universitário · Empreendedorismo Digital",
-    "titleLine1": "Desenvolvo soluções Full Stack.",
-    "titleLine2": "Ensino computação com excelência.",
-    "titleLine3": "Crio projetos digitais que geram impacto.",
-    "subtitle": "Desenvolvedor Full Stack, Professor Universitário e especialista em Projetos de Empreendedorismo Digital. Transformo ideias em produtos de software modernos, escaláveis e prontos para o mercado.",
-    "ctaProjects": "Ver Projetos & Produtos",
-    "ctaCv": "Baixar Currículo",
-    "ctaContact": "Entrar em Contato"
+    "eyebrow": "Dev Full Stack • Docência • Pesquisa",
+    "titleLine1": "Construindo software.",
+    "titleLine2": "Formando pessoas.",
+    "titleLine3": "Criando o que vem depois.",
+    "subtitle": "Engenheiro de software e professor universitário. Uno engenharia, docência e pesquisa para criar produtos digitais com impacto real.",
+    "ctaProjects": "Ver projetos",
+    "ctaContact": "Falar comigo",
+    "location": "Manaus / Brasil",
+    "availability": "Disponível para projetos",
+    "photoAlt": "Retrato profissional de Alexsander Farias, engenheiro de software full stack e professor universitário"
+  },
+  "theme": {
+    "groupLabel": "Aparência",
+    "light": "Clara",
+    "dark": "Escura",
+    "switchToLight": "Ativar versão clara",
+    "switchToDark": "Ativar versão escura"
   },
   "metrics": {
     "title": "Impacto & Trajetória",

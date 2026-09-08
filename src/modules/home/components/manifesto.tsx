@@ -18,14 +18,14 @@ export function Manifesto({ locale }: { locale: Locale }) {
             </span>
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-10 bg-brand rounded-full shrink-0" />
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-100 font-display leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-fg font-display leading-tight">
                 {dict.homeManifesto.title}
               </h2>
             </div>
-            <p className="text-base text-slate-300 leading-relaxed pl-6">
+            <p className="text-base text-fg-secondary leading-relaxed pl-6">
               {dict.homeManifesto.p1}
             </p>
-            <p className="text-base text-slate-400 leading-relaxed pl-6">
+            <p className="text-base text-fg-secondary leading-relaxed pl-6">
               {dict.homeManifesto.p2}
             </p>
 
@@ -45,10 +45,10 @@ export function Manifesto({ locale }: { locale: Locale }) {
               <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-accent/20 flex items-center justify-center text-accent">
                 <Terminal className="h-5 w-5" />
               </div>
-              <h3 className="text-base font-bold text-slate-100 font-display">
+              <h3 className="text-base font-bold text-fg font-display">
                 Engenharia Sólida
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-fg-secondary leading-relaxed">
                 Contratos tipados, modularidade estrita, desacoplamento e foco em manutenibilidade a longo prazo.
               </p>
             </div>
@@ -57,10 +57,10 @@ export function Manifesto({ locale }: { locale: Locale }) {
               <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-accent/20 flex items-center justify-center text-accent">
                 <Shield className="h-5 w-5" />
               </div>
-              <h3 className="text-base font-bold text-slate-100 font-display">
+              <h3 className="text-base font-bold text-fg font-display">
                 Security by Design
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-fg-secondary leading-relaxed">
                 Proteção contra OWASP Top 10, sanitização contínua e cabeçalhos defensivos de borda.
               </p>
             </div>
@@ -69,10 +69,10 @@ export function Manifesto({ locale }: { locale: Locale }) {
               <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-accent/20 flex items-center justify-center text-accent">
                 <Network className="h-5 w-5" />
               </div>
-              <h3 className="text-base font-bold text-slate-100 font-display">
+              <h3 className="text-base font-bold text-fg font-display">
                 Sistemas Distribuídos
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-fg-secondary leading-relaxed">
                 Operação sob alta concorrência com processamento assíncrono e resiliência a falhas de I/O.
               </p>
             </div>
@@ -81,10 +81,10 @@ export function Manifesto({ locale }: { locale: Locale }) {
               <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-accent/20 flex items-center justify-center text-accent">
                 <GraduationCap className="h-5 w-5" />
               </div>
-              <h3 className="text-base font-bold text-slate-100 font-display">
+              <h3 className="text-base font-bold text-fg font-display">
                 Formação Acadêmica
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-fg-secondary leading-relaxed">
                 Rigor metodológico na formação de novos engenheiros e pesquisa ativa de IA na educação.
               </p>
             </div>

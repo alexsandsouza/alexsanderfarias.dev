@@ -32,7 +32,7 @@ export function CaseStudyView({
         <div className="mb-8">
           <Link
             href={`/${locale}/projects`}
-            className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono text-fg-secondary hover:text-accent transition-colors"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>{isPt ? "Voltar ao Catálogo de Projetos" : "Back to Projects Catalog"}</span>
@@ -43,21 +43,21 @@ export function CaseStudyView({
         <header className="space-y-6 pb-12 border-b border-border-subtle max-w-4xl">
           <div className="flex flex-wrap items-center gap-3">
             <Badge variant="accent">{project.category.toUpperCase()}</Badge>
-            <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+            <span className="text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
               STATUS: {project.status.toUpperCase()}
             </span>
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-100 font-display">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-fg font-display">
               {project.title}
             </h1>
-            <p className="text-xl sm:text-2xl text-slate-300 font-display">
+            <p className="text-xl sm:text-2xl text-fg-secondary font-display">
               {project.headline}
             </p>
           </div>
 
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {project.summary}
           </p>
 
@@ -68,7 +68,7 @@ export function CaseStudyView({
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-200 text-xs font-mono transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg text-xs font-mono transition-colors"
               >
                 <Github className="h-4 w-4 text-accent" />
                 <span>Source Code / GitHub</span>
@@ -95,7 +95,7 @@ export function CaseStudyView({
                   key={idx}
                   className="rounded-lg bg-surface border border-border-subtle p-4"
                 >
-                  <p className="text-xs font-mono text-slate-400">{m.label}</p>
+                  <p className="text-xs font-mono text-fg-secondary">{m.label}</p>
                   <p className="text-2xl font-bold font-mono text-accent mt-1">
                     {m.value}
                   </p>
@@ -110,10 +110,10 @@ export function CaseStudyView({
           {/* Menu Lateral de Navegação Rápida (Sticky Table of Contents) */}
           <aside className="hidden lg:block lg:col-span-3">
             <div className="sticky top-24 space-y-4">
-              <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+              <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-fg-secondary">
                 {isPt ? "Seções do Case Study" : "Case Study Sections"}
               </h4>
-              <nav className="space-y-1 text-xs font-mono text-slate-400">
+              <nav className="space-y-1 text-xs font-mono text-fg-secondary">
                 {[
                   "01 Problem",
                   "02 Context",
@@ -141,14 +141,14 @@ export function CaseStudyView({
               </nav>
 
               <div className="pt-6 border-t border-border-subtle/80 space-y-2">
-                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-fg-secondary">
                   Stack
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((t) => (
                     <span
                       key={t}
-                      className="text-[11px] font-mono text-slate-300 bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
+                      className="text-[11px] font-mono text-fg-secondary bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
                     >
                       {t}
                     </span>
@@ -159,7 +159,7 @@ export function CaseStudyView({
           </aside>
 
           {/* Conteúdo Principal das 11 Seções */}
-          <main className="lg:col-span-9 space-y-16 text-slate-300 leading-relaxed">
+          <main className="lg:col-span-9 space-y-16 text-fg-secondary leading-relaxed">
             {/* 01 Problem */}
             <section id="01-problem" className="space-y-4 scroll-mt-24">
               <div className="flex items-center gap-2 text-accent font-mono text-sm font-semibold">
@@ -167,10 +167,10 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "O PROBLEMA" : "THE PROBLEM"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Qual desafio precisava ser resolvido?" : "What challenge needed solving?"}
               </h2>
-              <p className="text-base sm:text-lg text-slate-300">
+              <p className="text-base sm:text-lg text-fg-secondary">
                 {project.problem}
               </p>
             </section>
@@ -182,10 +182,10 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "CONTEXTO OPERACIONAL" : "OPERATIONAL CONTEXT"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Ambiente, Usuários & Stakeholders" : "Environment, Users & Stakeholders"}
               </h2>
-              <p className="text-base sm:text-lg text-slate-300">
+              <p className="text-base sm:text-lg text-fg-secondary">
                 {project.context}
               </p>
             </section>
@@ -197,12 +197,12 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "RESTRIÇÕES TÉCNICAS" : "TECHNICAL CONSTRAINTS"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Fronteiras e Limitações de Projeto" : "Boundaries & Project Limits"}
               </h2>
               <ul className="space-y-2.5">
                 {project.constraints.map((c, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
                     <AlertCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                     <span>{c}</span>
                   </li>
@@ -217,23 +217,23 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "ARQUITETURA DE SISTEMA" : "SYSTEM ARCHITECTURE"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {project.architecture.pattern}
               </h2>
 
               <div className="rounded-xl bg-surface border border-border-subtle p-6 space-y-4 font-mono text-xs">
                 <div className="flex items-center justify-between border-b border-border-subtle pb-3">
-                  <span className="text-slate-400">Diagrama de Fluxo / Componentes</span>
+                  <span className="text-fg-secondary">Diagrama de Fluxo / Componentes</span>
                   <Layers className="h-4 w-4 text-accent" />
                 </div>
-                <div className="p-4 bg-canvas rounded border border-border-muted text-slate-300 overflow-x-auto">
+                <div className="p-4 bg-canvas rounded border border-border-muted text-fg-secondary overflow-x-auto">
                   <code>{project.architecture.diagramDescription}</code>
                 </div>
                 <div className="space-y-2 pt-2">
-                  <p className="text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
+                  <p className="text-fg-secondary font-semibold uppercase tracking-wider text-[11px]">
                     Componentes Principais:
                   </p>
-                  <ul className="space-y-1.5 list-disc list-inside text-slate-300">
+                  <ul className="space-y-1.5 list-disc list-inside text-fg-secondary">
                     {project.architecture.components.map((comp, i) => (
                       <li key={i}>{comp}</li>
                     ))}
@@ -249,7 +249,7 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "DECISÕES TÉCNICAS (ADRs)" : "TECHNICAL DECISIONS (ADRs)"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Decisões, Racional & Trade-offs" : "Decisions, Rationales & Trade-offs"}
               </h2>
 
@@ -259,16 +259,16 @@ export function CaseStudyView({
                     key={i}
                     className="rounded-xl bg-surface border border-border-subtle p-6 space-y-3"
                   >
-                    <h3 className="text-lg font-bold text-slate-100 font-display flex items-center gap-2">
+                    <h3 className="text-lg font-bold text-fg font-display flex items-center gap-2">
                       <Terminal className="h-4 w-4 text-accent" />
                       <span>{td.decision}</span>
                     </h3>
                     <div className="space-y-1 text-sm">
-                      <p className="text-slate-300">
-                        <strong className="text-slate-100">Por quê:</strong> {td.rationale}
+                      <p className="text-fg-secondary">
+                        <strong className="text-fg">Por quê:</strong> {td.rationale}
                       </p>
-                      <p className="text-slate-400">
-                        <strong className="text-slate-200">Trade-off aceito:</strong> {td.tradeoff}
+                      <p className="text-fg-secondary">
+                        <strong className="text-fg">Trade-off aceito:</strong> {td.tradeoff}
                       </p>
                     </div>
                   </div>
@@ -283,12 +283,12 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "DETALHES DE IMPLEMENTAÇÃO" : "IMPLEMENTATION DETAILS"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Padrões de Código & Estrutura" : "Code Patterns & Structure"}
               </h2>
               <ul className="space-y-2.5">
                 {project.implementationDetails.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
                     <CheckCircle2 className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
@@ -303,13 +303,13 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "SEGURANÇA & DEFAULTS DEFENSIVOS" : "SECURITY & DEFENSIVE DEFAULTS"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Proteções Ativas (Security by Design)" : "Active Protections (Security by Design)"}
               </h2>
               <ul className="space-y-2.5">
                 {project.security.map((sec, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <Shield className="h-4 w-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
+                    <Shield className="h-4 w-4 text-emerald-700 dark:text-emerald-400 mt-1 flex-shrink-0" />
                     <span>{sec}</span>
                   </li>
                 ))}
@@ -323,12 +323,12 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "ESTRATÉGIA DE TESTES" : "TESTING STRATEGY"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Pirâmide de Testes & Cobertura" : "Test Pyramid & Coverage"}
               </h2>
               <ul className="space-y-2.5">
                 {project.testing.map((test, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
                     <CheckCircle2 className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                     <span>{test}</span>
                   </li>
@@ -343,12 +343,12 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "AUTOMAÇÃO & CI/CD" : "AUTOMATION & CI/CD"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Pipeline de Integração e Deploy Contínuo" : "Continuous Integration & Deployment Pipeline"}
               </h2>
               <ul className="space-y-2.5">
                 {project.cicd.map((ci, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
                     <GitBranch className="h-4 w-4 text-sky-400 mt-1 flex-shrink-0" />
                     <span>{ci}</span>
                   </li>
@@ -363,13 +363,13 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "RESULTADOS & IMPACTO" : "RESULTS & IMPACT"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "Métricas e Entregas Consolidadas" : "Consolidated Metrics & Deliverables"}
               </h2>
               <ul className="space-y-2.5">
                 {project.results.map((res, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 mt-1 flex-shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-fg-secondary">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-700 dark:text-emerald-400 mt-1 flex-shrink-0" />
                     <span>{res}</span>
                   </li>
                 ))}
@@ -383,7 +383,7 @@ export function CaseStudyView({
                 <span>/</span>
                 <span>{isPt ? "LIÇÕES APRENDIDAS & RETROSPECTIVA" : "LESSONS LEARNED & RETROSPECTIVE"}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 font-display">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg font-display">
                 {isPt ? "O que faríamos diferente?" : "What would we do differently?"}
               </h2>
               <div className="space-y-3">
@@ -393,7 +393,7 @@ export function CaseStudyView({
                     className="p-5 rounded-xl bg-surface border border-border-subtle flex items-start gap-3"
                   >
                     <Lightbulb className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-slate-300 leading-relaxed">{lesson}</p>
+                    <p className="text-sm text-fg-secondary leading-relaxed">{lesson}</p>
                   </div>
                 ))}
               </div>

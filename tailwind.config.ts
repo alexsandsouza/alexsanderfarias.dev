@@ -10,28 +10,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#06080D",
+        canvas: "rgb(var(--color-canvas) / <alpha-value>)",
         surface: {
-          DEFAULT: "#0E131F",
-          elevated: "#161D2E",
-          hover: "#1D273D",
+          DEFAULT: "rgb(var(--color-surface) / <alpha-value>)",
+          elevated: "rgb(var(--color-surface-elevated) / <alpha-value>)",
+          hover: "rgb(var(--color-surface-hover) / <alpha-value>)",
         },
         border: {
-          subtle: "#1E2638",
-          muted: "#2A364F",
-          highlight: "#384766",
-        },
-        accent: {
-          DEFAULT: "#00E5FF",
-          hover: "#38BDF8",
-          subtle: "rgba(0, 229, 255, 0.08)",
-          glow: "rgba(0, 229, 255, 0.25)",
+          subtle: "rgb(var(--color-border-subtle) / <alpha-value>)",
+          muted: "rgb(var(--color-border-muted) / <alpha-value>)",
+          highlight: "rgb(var(--color-border-highlight) / <alpha-value>)",
         },
         brand: {
-          DEFAULT: "#D90429",
-          hover: "#EF233C",
-          dark: "#8D0801",
-          subtle: "rgba(217, 4, 41, 0.1)",
+          DEFAULT: "rgb(var(--color-brand) / <alpha-value>)",
+          hover: "rgb(var(--color-brand-hover) / <alpha-value>)",
+          dark: "rgb(var(--color-brand-dark) / <alpha-value>)",
+          subtle: "rgba(var(--color-brand) / 0.1)",
+        },
+        accent: {
+          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          hover: "rgb(var(--color-accent) / 0.8)",
+          subtle: "rgba(var(--color-accent) / 0.08)",
+          glow: "rgba(var(--color-accent) / 0.25)",
+        },
+        fg: {
+          DEFAULT: "rgb(var(--color-text-primary) / <alpha-value>)",
+          secondary: "rgb(var(--color-text-secondary) / <alpha-value>)",
+          muted: "rgb(var(--color-text-muted) / <alpha-value>)",
         },
         slate: {
           850: "#131A29",

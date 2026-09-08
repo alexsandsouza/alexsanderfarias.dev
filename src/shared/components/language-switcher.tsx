@@ -32,7 +32,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
           "px-2.5 py-1 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent",
           currentLocale === "pt"
             ? "bg-accent/15 text-accent border border-accent/30 font-semibold"
-            : "text-slate-400 hover:text-slate-200"
+            : "text-fg-secondary hover:text-fg"
         )}
         aria-current={currentLocale === "pt" ? "true" : undefined}
       >
@@ -44,7 +44,7 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
           "px-2.5 py-1 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent",
           currentLocale === "en"
             ? "bg-accent/15 text-accent border border-accent/30 font-semibold"
-            : "text-slate-400 hover:text-slate-200"
+            : "text-fg-secondary hover:text-fg"
         )}
         aria-current={currentLocale === "en" ? "true" : undefined}
       >

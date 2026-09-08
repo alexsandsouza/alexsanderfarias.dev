@@ -31,10 +31,10 @@ export default function ErrorBoundary({
             <span className="text-xs font-mono text-rose-400 uppercase tracking-widest">
               Error 500 · Internal Server Anomaly
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-100 font-display">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-fg font-display">
               Falha Temporária de Execução
             </h1>
-            <p className="text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-fg-secondary max-w-md mx-auto leading-relaxed">
               Ocorreu um erro imprevisto durante o processamento. Nenhuma informação confidencial foi comprometida.
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function ErrorBoundary({
             <button
               type="button"
               onClick={() => reset()}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-slate-100 font-semibold text-xs font-mono transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-fg font-semibold text-xs font-mono transition-all"
             >
               <RefreshCw className="h-4 w-4 text-accent" />
               <span>Tentar Novamente</span>

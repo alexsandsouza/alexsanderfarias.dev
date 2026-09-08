@@ -18,10 +18,10 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
           <Badge variant="accent">
             {isPt ? "Portfólio de Engenharia" : "Engineering Portfolio"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
             {isPt ? "Projetos & Case Studies" : "Projects & Case Studies"}
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {isPt
               ? "Cada estudo de caso disseca um sistema sob a ótica da Engenharia de Software: problemas reais, restrições operacionais, diagramas de arquitetura, decisões técnicas fundamentadas, segurança, testes e lições aprendidas."
               : "Each case study dissects a real system through the lens of Software Engineering: concrete problems, operational constraints, architectural diagrams, justified technical trade-offs, security, testing, and retrospectives."}
@@ -40,21 +40,21 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
                   <span className="text-xs font-mono font-medium text-accent uppercase tracking-wider">
                     {project.category}
                   </span>
-                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                  <span className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
                     {project.status}
                   </span>
                 </div>
 
                 <div className="space-y-1">
-                  <h2 className="text-2xl font-bold text-slate-100 font-display group-hover:text-accent transition-colors">
+                  <h2 className="text-2xl font-bold text-fg font-display group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-xs font-mono text-slate-400">
+                  <p className="text-xs font-mono text-fg-secondary">
                     {project.headline}
                   </p>
                 </div>
 
-                <p className="text-sm text-slate-400 leading-relaxed line-clamp-3">
+                <p className="text-sm text-fg-secondary leading-relaxed line-clamp-3">
                   {project.summary}
                 </p>
 
@@ -63,10 +63,10 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
                   <div className="grid grid-cols-3 gap-2 py-3 border-y border-border-subtle/60 text-center">
                     {project.metrics.map((m, idx) => (
                       <div key={idx} className="space-y-0.5">
-                        <span className="text-sm font-bold font-mono text-slate-200">
+                        <span className="text-sm font-bold font-mono text-fg">
                           {m.value}
                         </span>
-                        <p className="text-[10px] text-slate-400 leading-tight">
+                        <p className="text-[10px] text-fg-secondary leading-tight">
                           {m.label}
                         </p>
                       </div>
@@ -79,7 +79,7 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-[11px] font-mono text-slate-300 bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
+                      className="text-[11px] font-mono text-fg-secondary bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
                     >
                       {tech}
                     </span>
@@ -97,13 +97,13 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
 
-                <div className="flex items-center gap-3 text-slate-400">
+                <div className="flex items-center gap-3 text-fg-secondary">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-slate-200 transition-colors"
+                      className="hover:text-fg transition-colors"
                       title="Repositório GitHub"
                     >
                       <Github className="h-4 w-4" />
@@ -114,7 +114,7 @@ export function ProjectsCatalog({ locale }: { locale: Locale }) {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-slate-200 transition-colors"
+                      className="hover:text-fg transition-colors"
                       title="Demonstração Online"
                     >
                       <ExternalLink className="h-4 w-4" />

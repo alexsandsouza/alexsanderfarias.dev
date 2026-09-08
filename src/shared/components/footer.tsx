@@ -11,24 +11,24 @@ export function Footer({ locale }: { locale: Locale }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border-subtle bg-canvas text-slate-400 py-12 transition-colors">
+    <footer className="border-t border-border-subtle bg-canvas text-fg-secondary py-12 transition-colors">
       <Container size="wide">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Coluna 1: Assinatura e Posicionamento */}
           <div className="md:col-span-2 space-y-4">
             <Link
               href={`/${locale}`}
-              className="inline-flex items-center gap-2 font-mono text-sm font-semibold text-slate-100 hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 font-mono text-sm font-semibold text-fg hover:text-accent transition-colors"
             >
               <Terminal className="h-4 w-4 text-accent" />
               <span>
                 alexsanderfarias<span className="text-accent">.dev</span>
               </span>
             </Link>
-            <p className="text-sm text-slate-400 max-w-md leading-relaxed">
+            <p className="text-sm text-fg-secondary max-w-md leading-relaxed">
               Engenharia de Software · Docência em Computação · Pesquisa Aplicada em Inteligência Artificial.
             </p>
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>WCAG 2.2 AA · Security Hardened</span>
             </div>
@@ -36,7 +36,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
           {/* Coluna 2: Módulos Principais */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-200">
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-fg">
               Navegação
             </h4>
             <ul className="space-y-2 text-sm">
@@ -70,7 +70,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
           {/* Coluna 3: Presença e Autoridade */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-200">
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-fg">
               Autoridade & Redes
             </h4>
             <ul className="space-y-2 text-sm">
@@ -123,7 +123,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         {/* Rodapé Inferior */}
-        <div className="border-t border-border-subtle pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+        <div className="border-t border-border-subtle pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-fg-muted">
           <p>© {currentYear} {siteConfig.name}. {dict.footer.rights}</p>
           <p className="text-center sm:text-right">{dict.footer.engineeringTag}</p>
         </div>

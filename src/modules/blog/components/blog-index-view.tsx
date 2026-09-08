@@ -19,10 +19,10 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
           <Badge variant="accent">
             {isPt ? "Base de Conhecimento & Artigos" : "Technical Knowledge & Articles"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
             {isPt ? "Engenharia, IA & Arquitetura" : "Engineering, AI & Architecture"}
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {isPt
               ? "Artigos aprofundados sobre boas práticas de arquitetura de software, segurança por design, metodologias ativas no ensino de computação e inteligência artificial aplicada."
               : "In-depth technical essays exploring durable software architecture, security by design, computer science pedagogy, and empirical AI applications."}
@@ -37,21 +37,21 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
               className="rounded-xl bg-surface border border-border-subtle hover:border-border-muted p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 group hover:shadow-xl"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between text-xs font-mono text-slate-400">
+                <div className="flex items-center justify-between text-xs font-mono text-fg-secondary">
                   <span className="text-accent uppercase tracking-wider font-semibold">
                     {post.category}
                   </span>
                   <div className="flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5 text-slate-400" />
+                    <Clock className="h-3.5 w-3.5 text-fg-secondary" />
                     <span>{post.readTimeMinutes} min de leitura</span>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <h2 className="text-xl font-bold text-slate-100 font-display group-hover:text-accent transition-colors leading-snug">
+                  <h2 className="text-xl font-bold text-fg font-display group-hover:text-accent transition-colors leading-snug">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-slate-400 leading-relaxed line-clamp-3">
+                  <p className="text-sm text-fg-secondary leading-relaxed line-clamp-3">
                     {post.description}
                   </p>
                 </div>
@@ -60,7 +60,7 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[11px] font-mono text-slate-400 bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
+                      className="text-[11px] font-mono text-fg-secondary bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
                     >
                       #{tag}
                     </span>
@@ -69,7 +69,7 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
               </div>
 
               <div className="pt-6 mt-6 border-t border-border-subtle/50 flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-fg-secondary">
                   <Calendar className="h-3.5 w-3.5" />
                   <span>{formatDate(post.publishedAt, isPt ? "pt-BR" : "en-US")}</span>
                 </span>

@@ -35,12 +35,12 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
 
           <div className="flex items-center gap-4">
             <div className="w-1.5 h-10 bg-brand rounded-full shrink-0" />
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
               {isPt ? "Onde o trabalho aconteceu." : "Where the work took place."}
             </h1>
           </div>
 
-          <p className="text-base text-slate-400 pl-6">
+          <p className="text-base text-fg-secondary pl-6">
             {isPt
               ? "Posições consolidadas em desenvolvimento Full Stack, docência de ensino superior e consultoria de empreendedorismo digital."
               : "Track record across full-stack engineering, university leadership, and digital entrepreneurship consulting."}
@@ -60,7 +60,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                   className={`absolute -left-3 top-1.5 h-6 w-6 rounded-full border flex items-center justify-center transition-colors ${
                     exp.current
                       ? "bg-accent text-canvas border-accent shadow-[0_0_12px_rgba(0,229,255,0.4)]"
-                      : "bg-surface-elevated text-slate-400 border-border-subtle group-hover:border-accent/40"
+                      : "bg-surface-elevated text-fg-secondary border-border-subtle group-hover:border-accent/40"
                   }`}
                 >
                   {isAcademic ? (
@@ -74,7 +74,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                 <div className="rounded-xl bg-surface border border-border-subtle hover:border-border-muted p-6 transition-all">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-border-subtle/60">
                     <div>
-                      <h2 className="text-xl font-bold text-slate-100 font-display">
+                      <h2 className="text-xl font-bold text-fg font-display">
                         {exp.role}
                       </h2>
                       <p className="text-sm font-medium text-accent">
@@ -83,7 +83,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 bg-surface-elevated px-2.5 py-1 rounded">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-mono text-fg-secondary bg-surface-elevated px-2.5 py-1 rounded">
                         <Calendar className="h-3 w-3" />
                         <span>{exp.period}</span>
                       </span>
@@ -91,7 +91,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                       <button
                         type="button"
                         onClick={() => toggleExpand(exp.id)}
-                        className="p-1 rounded-md text-slate-400 hover:text-slate-100 hover:bg-surface-elevated transition-colors"
+                        className="p-1 rounded-md text-fg-secondary hover:text-fg hover:bg-surface-elevated transition-colors"
                         aria-expanded={isExpanded}
                         aria-label={isExpanded ? "Recolher detalhes" : "Expandir detalhes"}
                       >
@@ -108,10 +108,10 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                   <div className="pt-4 space-y-4">
                     {/* Responsabilidades */}
                     <div className="space-y-2">
-                      <p className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                      <p className="text-xs font-mono font-semibold uppercase tracking-wider text-fg-secondary">
                         {isPt ? "Principais Responsabilidades" : "Key Responsibilities"}
                       </p>
-                      <ul className="space-y-1.5 text-sm text-slate-300">
+                      <ul className="space-y-1.5 text-sm text-fg-secondary">
                         {(isExpanded
                           ? exp.responsibilities
                           : exp.responsibilities.slice(0, 2)
@@ -127,13 +127,13 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                     {/* Contribuições Expandidas */}
                     {isExpanded && (
                       <div className="space-y-2 pt-2 border-t border-border-subtle/60 animate-in fade-in-50">
-                        <p className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                        <p className="text-xs font-mono font-semibold uppercase tracking-wider text-fg-secondary">
                           {isPt ? "Principais Contribuições & Impactos" : "Key Contributions & Impact"}
                         </p>
-                        <ul className="space-y-1.5 text-sm text-slate-300">
+                        <ul className="space-y-1.5 text-sm text-fg-secondary">
                           {exp.contributions.map((contrib, i) => (
                             <li key={i} className="flex items-start gap-2.5">
-                              <CheckCircle2 className="h-4 w-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-emerald-700 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
                               <span>{contrib}</span>
                             </li>
                           ))}
@@ -146,7 +146,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                       {exp.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="text-[11px] font-mono text-slate-300 bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
+                          className="text-[11px] font-mono text-fg-secondary bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
                         >
                           {tech}
                         </span>

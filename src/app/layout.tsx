@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/shared/config/site";
+import { themeInitScript } from "@/shared/config/theme";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,10 +80,13 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} dark`}
+      className={`dark ${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-canvas text-slate-100 flex flex-col font-sans selection:bg-accent selection:text-canvas">
+      <body className="min-h-screen bg-canvas flex flex-col font-sans selection:bg-accent selection:text-canvas transition-colors duration-300">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         {children}
       </body>
     </html>

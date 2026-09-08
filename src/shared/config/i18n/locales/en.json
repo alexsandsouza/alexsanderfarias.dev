@@ -12,14 +12,23 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Full Stack Dev · University Professor · Digital Entrepreneurship",
-    "titleLine1": "I build Full Stack solutions.",
-    "titleLine2": "I teach technology with excellence.",
-    "titleLine3": "I build digital products that drive impact.",
-    "subtitle": "Full Stack Developer, University Professor, and specialist in Digital Entrepreneurship Projects. Turning innovative ideas into scalable, modern web products designed for the market.",
-    "ctaProjects": "Explore Projects & Products",
-    "ctaCv": "Download Resume",
-    "ctaContact": "Get in Touch"
+    "eyebrow": "Full Stack Dev • Teaching • Research",
+    "titleLine1": "Building software.",
+    "titleLine2": "Empowering people.",
+    "titleLine3": "Creating what comes next.",
+    "subtitle": "Software engineer and university professor. I bring together engineering, teaching, and research to build digital products with real impact.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Get in touch",
+    "location": "Manaus / Brazil",
+    "availability": "Available for projects",
+    "photoAlt": "Professional portrait of Alexsander Farias, full stack software engineer and university professor"
+  },
+  "theme": {
+    "groupLabel": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
   },
   "metrics": {
     "title": "Impact & Track Record",

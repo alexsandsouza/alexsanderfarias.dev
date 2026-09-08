@@ -3,30 +3,69 @@
 @tailwind utilities;
 
 @layer base {
+  /* ─── Light Mode (default root) ─── */
   :root {
+    --color-canvas: 250 250 250;
+    --color-surface: 255 255 255;
+    --color-surface-elevated: 245 245 248;
+    --color-surface-hover: 238 238 242;
+    --color-border-subtle: 228 228 235;
+    --color-border-muted: 210 210 220;
+    --color-border-highlight: 190 190 205;
+    --color-brand: 217 4 41;
+    --color-brand-hover: 239 35 60;
+    --color-brand-dark: 141 8 1;
+    --color-accent: 8 145 178;
+    --color-text-primary: 15 23 42;
+    --color-text-secondary: 71 85 105;
+    --color-text-muted: 100 116 139;
+
     --font-inter: "Inter", sans-serif;
     --font-outfit: "Outfit", sans-serif;
     --font-jetbrains: "JetBrains Mono", monospace;
   }
 
+  /* ─── Dark Mode ─── */
+  .dark {
+    --color-canvas: 6 8 13;
+    --color-surface: 14 19 31;
+    --color-surface-elevated: 22 29 46;
+    --color-surface-hover: 29 39 61;
+    --color-border-subtle: 30 38 56;
+    --color-border-muted: 42 54 79;
+    --color-border-highlight: 56 71 102;
+    --color-brand: 217 4 41;
+    --color-brand-hover: 239 35 60;
+    --color-brand-dark: 141 8 1;
+    --color-accent: 0 229 255;
+    --color-text-primary: 248 250 252;
+    --color-text-secondary: 203 213 225;
+    --color-text-muted: 148 163 184;
+  }
+
   html {
-    color-scheme: dark;
     scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
-    background-color: #06080D;
-    color: #F8FAFC;
+    background-color: rgb(var(--color-canvas));
+    color: rgb(var(--color-text-primary));
     font-family: var(--font-inter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  /* Focus visível com alto contraste para conformidade WCAG 2.2 AA */
+  /* Focus visível com alto contraste — WCAG 2.2 AA */
   *:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px #06080D, 0 0 0 4px #00E5FF;
+    box-shadow: 0 0 0 2px rgb(var(--color-canvas)), 0 0 0 4px rgb(var(--color-accent));
   }
 }
 
@@ -42,21 +81,33 @@
   }
 }
 
-/* Scrollbar estilizada */
+/* Scrollbar estilizada — adaptável ao tema */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #06080D;
+  background: rgb(var(--color-canvas));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E2638;
+  background: rgb(var(--color-border-subtle));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2A364F;
+  background: rgb(var(--color-border-muted));
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, rgb(var(--color-border-subtle) / 0.85) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--color-border-subtle) / 0.85) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, #000 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, #000 70%, transparent 100%);
+    opacity: 0.5;
+  }
 }

@@ -31,16 +31,16 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
           <Badge variant="accent">
             {isPt ? "Produção Bibliográfica" : "Scientific Publications"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
             {isPt ? "Artigos & Publicações Científicas" : "Papers & Peer-Reviewed Publications"}
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {isPt
               ? "Produção acadêmica formal em inteligência artificial aplicada à educação, arquiteturas de software e sistemas distribuídos, com suporte a exportação direta BibTeX e identificador DOI."
               : "Peer-reviewed academic contributions in educational AI, systems engineering, and distributed computing, complete with one-click BibTeX exports and canonical DOI links."}
           </p>
 
-          <div className="inline-flex items-center gap-2 p-3 rounded-lg bg-surface border border-border-subtle text-xs font-mono text-slate-400">
+          <div className="inline-flex items-center gap-2 p-3 rounded-lg bg-surface border border-border-subtle text-xs font-mono text-fg-secondary">
             <Info className="h-4 w-4 text-accent" />
             <span>
               &lt;TODO: Alexsander fornecer dados oficiais das publicações para atualização dos títulos e DOIs&gt;
@@ -51,7 +51,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
         {/* Barra de Filtros Reativos */}
         <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-surface border border-border-subtle mb-10 text-xs font-mono">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-slate-400 font-semibold uppercase tracking-wider">
+            <span className="text-fg-secondary font-semibold uppercase tracking-wider">
               {isPt ? "Área Temática:" : "Research Area:"}
             </span>
             {[
@@ -67,7 +67,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
                 className={`px-3 py-1.5 rounded-md transition-colors ${
                   selectedArea === btn.id
                     ? "bg-accent/15 text-accent border border-accent/30 font-semibold"
-                    : "text-slate-400 hover:text-slate-200 hover:bg-surface-elevated"
+                    : "text-fg-secondary hover:text-fg hover:bg-surface-elevated"
                 }`}
               >
                 {btn.label}
@@ -76,7 +76,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-slate-400 font-semibold uppercase tracking-wider">
+            <span className="text-fg-secondary font-semibold uppercase tracking-wider">
               {isPt ? "Tipo:" : "Type:"}
             </span>
             {[
@@ -91,7 +91,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
                 className={`px-3 py-1.5 rounded-md transition-colors ${
                   selectedType === btn.id
                     ? "bg-accent/15 text-accent border border-accent/30 font-semibold"
-                    : "text-slate-400 hover:text-slate-200 hover:bg-surface-elevated"
+                    : "text-fg-secondary hover:text-fg hover:bg-surface-elevated"
                 }`}
               >
                 {btn.label}
@@ -112,7 +112,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
                   <span className="text-xs font-mono font-bold text-accent px-2 py-0.5 rounded bg-accent/10 border border-accent/20">
                     {pub.year}
                   </span>
-                  <span className="text-xs font-mono uppercase text-slate-400">
+                  <span className="text-xs font-mono uppercase text-fg-secondary">
                     [{pub.type}]
                   </span>
                 </div>
@@ -124,7 +124,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
                       href={pub.pdfUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-xs font-mono text-slate-300 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-xs font-mono text-fg-secondary hover:text-fg transition-colors"
                       title="Baixar artigo em PDF"
                     >
                       <FileText className="h-3.5 w-3.5 text-accent" />
@@ -136,7 +136,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
                       href={`https://doi.org/${pub.doi}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-xs font-mono text-slate-300 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-surface-elevated hover:bg-surface-hover border border-border-subtle text-xs font-mono text-fg-secondary hover:text-fg transition-colors"
                       title="Registro DOI Oficial"
                     >
                       <ExternalLink className="h-3.5 w-3.5 text-accent" />
@@ -147,10 +147,10 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
               </div>
 
               <div className="space-y-1.5">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-100 font-display">
+                <h2 className="text-xl sm:text-2xl font-bold text-fg font-display">
                   {pub.title}
                 </h2>
-                <p className="text-sm font-mono text-slate-400">
+                <p className="text-sm font-mono text-fg-secondary">
                   {pub.authors.join(", ")}
                 </p>
                 <p className="text-xs font-mono text-accent">
@@ -159,7 +159,7 @@ export function PublicationsCatalog({ locale }: { locale: Locale }) {
               </div>
 
               {pub.abstract && (
-                <p className="text-sm text-slate-300 leading-relaxed pt-2">
+                <p className="text-sm text-fg-secondary leading-relaxed pt-2">
                   {pub.abstract}
                 </p>
               )}

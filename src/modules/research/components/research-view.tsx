@@ -27,12 +27,12 @@ export function ResearchView({ locale }: { locale: Locale }) {
           <Badge variant="accent">
             {isPt ? "Pesquisa Científica & Inovação" : "Scientific Research & Innovation"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-fg font-display">
             {isPt
               ? "Inteligência Artificial & Engenharia de Software"
               : "Artificial Intelligence & Software Engineering"}
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-fg-secondary leading-relaxed">
             {isPt
               ? "Investigações empíricas dedicadas a compreender o impacto de modelos generativos na formação de programadores, na síntese assistida de código e na confiabilidade de sistemas distribuídos."
               : "Empirical investigations examining the impact of generative models on computer science education, automated code synthesis, and the resilience of distributed software."}
@@ -44,9 +44,9 @@ export function ResearchView({ locale }: { locale: Locale }) {
               href={siteConfig.links.orcid}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border-subtle hover:border-accent/40 text-xs font-mono text-slate-300 transition-colors"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border-subtle hover:border-accent/40 text-xs font-mono text-fg-secondary transition-colors"
             >
-              <ShieldCheck className="h-4 w-4 text-emerald-400" />
+              <ShieldCheck className="h-4 w-4 text-emerald-700 dark:text-emerald-400" />
               <span>ORCID: 0000-000X-XXXX-XXXX &lt;TODO&gt;</span>
             </a>
 
@@ -54,7 +54,7 @@ export function ResearchView({ locale }: { locale: Locale }) {
               href={siteConfig.links.lattes}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border-subtle hover:border-accent/40 text-xs font-mono text-slate-300 transition-colors"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border-subtle hover:border-accent/40 text-xs font-mono text-fg-secondary transition-colors"
             >
               <BookOpen className="h-4 w-4 text-accent" />
               <span>Currículo Lattes CNPq</span>
@@ -84,7 +84,7 @@ export function ResearchView({ locale }: { locale: Locale }) {
                     <span className="text-xs font-mono font-medium text-accent uppercase tracking-wider">
                       {isPt ? "Linha de Pesquisa 0" + (idx + 1) : "Research Line 0" + (idx + 1)}
                     </span>
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-100 font-display">
+                    <h2 className="text-xl sm:text-2xl font-bold text-fg font-display">
                       {line.title}
                     </h2>
                   </div>
@@ -94,7 +94,7 @@ export function ResearchView({ locale }: { locale: Locale }) {
                   {line.keywords.map((kw) => (
                     <span
                       key={kw}
-                      className="text-[11px] font-mono text-slate-400 bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
+                      className="text-[11px] font-mono text-fg-secondary bg-surface-elevated border border-border-subtle px-2 py-0.5 rounded"
                     >
                       {kw}
                     </span>
@@ -102,15 +102,15 @@ export function ResearchView({ locale }: { locale: Locale }) {
                 </div>
               </div>
 
-              <p className="text-base text-slate-300 leading-relaxed">
+              <p className="text-base text-fg-secondary leading-relaxed">
                 {line.description}
               </p>
 
               <div className="space-y-2 pt-2">
-                <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-fg-secondary">
                   {isPt ? "Projetos & Experimentos Vinculados" : "Associated Projects & Experiments"}
                 </h3>
-                <ul className="space-y-2 text-sm text-slate-300">
+                <ul className="space-y-2 text-sm text-fg-secondary">
                   {line.projects.map((proj, pIdx) => (
                     <li key={pIdx} className="flex items-start gap-3">
                       <span className="text-accent mt-0.5">▹</span>
@@ -126,11 +126,11 @@ export function ResearchView({ locale }: { locale: Locale }) {
         {/* Card Informativo de Mestrado / Pós-Graduação */}
         <div className="rounded-xl bg-surface border border-border-subtle p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <h3 className="text-xl font-bold text-slate-100 font-display flex items-center gap-2">
+            <h3 className="text-xl font-bold text-fg font-display flex items-center gap-2">
               <Layers className="h-5 w-5 text-accent" />
               <span>{isPt ? "Pós-Graduação & Mestrado" : "Graduate Studies & Master's Degree"}</span>
             </h3>
-            <p className="text-sm text-slate-400 max-w-2xl">
+            <p className="text-sm text-fg-secondary max-w-2xl">
               &lt;TODO: Alexsander informar instituição do programa de pós-graduação, título oficial da dissertação de mestrado e orientador(a)&gt;
             </p>
           </div>
