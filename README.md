@@ -1,4 +1,4 @@
-# alexsanderfarias.dev — Plataforma Profissional & Hub Acadêmico
+# alexsanderfarias.dev - Plataforma Profissional & Hub Acadêmico
 
 > **Produção:** [https://alexsanderfarias.dev](https://alexsanderfarias.dev)  
 > **Autor:** Alexsander Farias (Software Engineer · Professor · Researcher · Systems Architect)  
