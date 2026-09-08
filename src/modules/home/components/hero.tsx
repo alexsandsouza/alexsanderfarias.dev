@@ -269,7 +269,7 @@ export function Hero({ locale }: { locale: Locale }) {
                 {/* Área da Fotografia Profissional em Destaque */}
                 <div className="relative w-full aspect-[4/5] bg-canvas overflow-hidden">
                   <Image
-                    src="/images/alexsander-hero.png"
+                    src="/images/Foto_Estudio2.png"
                     alt="Alexsander Farias - Engenheiro de Software Full Stack e Professor Universitário"
                     fill
                     priority
