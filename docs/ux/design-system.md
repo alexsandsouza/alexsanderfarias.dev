@@ -1,7 +1,7 @@
 # Design System: Dark Premium Academic Engineering
 
 ## 1. Filosofia Visual
-A identidade visual do **alexsanderfarias.dev** traduz a convergência entre **alta engenharia de software**, **pesquisa acadêmica rigorosa** e **inovação em inteligência artificial**.
+A identidade visual do **alexsanderfarias-dev.vercel.app** traduz a convergência entre **alta engenharia de software**, **pesquisa acadêmica rigorosa** e **inovação em inteligência artificial**.
 Rejeita deliberadamente templates corporativos genéricos e designs estridentes, adotando um visual sóbrio, cirúrgico, minimalista e altamente contrastado.
 
 ## 2. Paleta Cromática (Color Tokens)
