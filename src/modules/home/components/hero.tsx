@@ -38,7 +38,7 @@ export function Hero({ locale }: { locale: Locale }) {
                 Alexsander Farias
               </p>
               <p className="text-sm font-mono text-slate-400">
-                Software Engineer · Professor · Researcher · Systems Architect
+                Dev Full Stack · Professor Universitário · Empreendedorismo Digital
               </p>
             </div>
 
@@ -77,15 +77,15 @@ export function Hero({ locale }: { locale: Locale }) {
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border-subtle/80 max-w-lg text-xs font-mono text-slate-400">
               <div className="flex items-center gap-2">
                 <Code2 className="h-4 w-4 text-accent" />
-                <span>Modular Monolith</span>
+                <span>Dev Full Stack</span>
               </div>
               <div className="flex items-center gap-2">
                 <GraduationCap className="h-4 w-4 text-accent" />
-                <span>Ensino Superior</span>
+                <span>Professor Universitário</span>
               </div>
               <div className="flex items-center gap-2">
                 <Cpu className="h-4 w-4 text-accent" />
-                <span>IA Aplicada</span>
+                <span>Empreendedorismo Digital</span>
               </div>
             </div>
           </div>

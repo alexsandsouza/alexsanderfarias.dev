@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Alexsander Farias",
-  title: "Alexsander Farias | Software Engineer · Professor · Researcher",
+  title: "Alexsander Farias | Desenvolvedor Full Stack · Professor Universitário · Empreendedorismo Digital",
   description:
-    "Portfólio profissional e acadêmico de Alexsander Farias. Engenharia de software, sistemas distribuídos, arquitetura, inteligência artificial e educação em computação.",
-  url: "https://alexsanderfarias.dev",
-  ogImage: "https://alexsanderfarias.dev/og.png",
+    "Portfólio profissional de Alexsander Farias. Desenvolvedor Full Stack, Professor Universitário e especialista em Desenvolvimento de Projetos de Empreendedorismo Digital e Engenharia de Software.",
+  url: "https://alexsanderfarias.vercel.app",
+  ogImage: "https://alexsanderfarias.vercel.app/og.png",
   links: {
     github: "https://github.com/alexsandsouza",
     linkedin: "https://linkedin.com/in/alexsanderfarias",
@@ -14,7 +14,7 @@ export const siteConfig = {
   },
   author: {
     name: "Alexsander Farias",
-    role: "Software Engineer & Professor",
-    bio: "Engenheiro de Software, Professor e Pesquisador com foco em sistemas de alta escala, arquitetura resiliente e IA aplicada à educação.",
+    role: "Dev Full Stack · Professor Universitário · Empreendedorismo Digital",
+    bio: "Desenvolvedor Full Stack, Professor Universitário e criador de soluções tecnológicas orientadas a Empreendedorismo Digital, educação e arquitetura escalável.",
   },
 };

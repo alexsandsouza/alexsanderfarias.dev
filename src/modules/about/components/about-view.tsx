@@ -22,8 +22,8 @@ export function AboutView({ locale }: { locale: Locale }) {
           </h1>
           <p className="text-xl text-slate-300 font-display leading-relaxed">
             {isPt
-              ? "Engenheiro de Software Sênior, Professor de Ensino Superior e Pesquisador focado na intersecção entre arquitetura de sistemas distribuídos e inteligência artificial."
-              : "Senior Software Engineer, University Professor, and Researcher focused on the convergence of distributed systems architecture and artificial intelligence."}
+              ? "Desenvolvedor Full Stack, Professor Universitário e especialista em Desenvolvimento de Projetos de Empreendedorismo Digital."
+              : "Full Stack Developer, University Professor, and specialist in Digital Entrepreneurship and Software Products."}
           </p>
         </div>
 

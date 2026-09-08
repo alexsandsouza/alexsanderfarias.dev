@@ -12,13 +12,13 @@
     "contact": "Contato"
   },
   "hero": {
-    "badge": "Engenharia de Software · Docência · Pesquisa em IA",
-    "titleLine1": "Construo software de alta escala.",
-    "titleLine2": "Ensino computação com rigor.",
-    "titleLine3": "Pesquiso o que vem a seguir.",
-    "subtitle": "Engenheiro de Software sênior, Professor universitário e Pesquisador focado na intersecção entre arquiteturas distribuídas, segurança e inteligência artificial aplicada à educação.",
-    "ctaProjects": "Explorar Projetos Selecionados",
-    "ctaCv": "Baixar CV Profissional",
+    "badge": "Dev Full Stack · Professor Universitário · Empreendedorismo Digital",
+    "titleLine1": "Desenvolvo soluções Full Stack.",
+    "titleLine2": "Ensino computação com excelência.",
+    "titleLine3": "Crio projetos digitais que geram impacto.",
+    "subtitle": "Desenvolvedor Full Stack, Professor Universitário e especialista em Projetos de Empreendedorismo Digital. Transformo ideias em produtos de software modernos, escaláveis e prontos para o mercado.",
+    "ctaProjects": "Ver Projetos & Produtos",
+    "ctaCv": "Baixar Currículo",
     "ctaContact": "Entrar em Contato"
   },
   "metrics": {

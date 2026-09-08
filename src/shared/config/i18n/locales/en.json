@@ -12,13 +12,13 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Software Engineering · Academia · AI Research",
-    "titleLine1": "I build large-scale software.",
-    "titleLine2": "I teach technology with rigor.",
-    "titleLine3": "I research what comes next.",
-    "subtitle": "Senior Software Engineer, University Professor, and Researcher operating at the convergence of distributed architectures, security, and artificial intelligence applied to computing education.",
-    "ctaProjects": "Explore Selected Projects",
-    "ctaCv": "Download Curriculum Vitae",
+    "badge": "Full Stack Dev · University Professor · Digital Entrepreneurship",
+    "titleLine1": "I build Full Stack solutions.",
+    "titleLine2": "I teach technology with excellence.",
+    "titleLine3": "I build digital products that drive impact.",
+    "subtitle": "Full Stack Developer, University Professor, and specialist in Digital Entrepreneurship Projects. Turning innovative ideas into scalable, modern web products designed for the market.",
+    "ctaProjects": "Explore Projects & Products",
+    "ctaCv": "Download Resume",
     "ctaContact": "Get in Touch"
   },
   "metrics": {
