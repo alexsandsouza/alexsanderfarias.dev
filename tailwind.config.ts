@@ -27,6 +27,12 @@ const config: Config = {
           subtle: "rgba(0, 229, 255, 0.08)",
           glow: "rgba(0, 229, 255, 0.25)",
         },
+        brand: {
+          DEFAULT: "#D90429",
+          hover: "#EF233C",
+          dark: "#8D0801",
+          subtle: "rgba(217, 4, 41, 0.1)",
+        },
         slate: {
           850: "#131A29",
           950: "#06080D",

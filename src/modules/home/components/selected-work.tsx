@@ -4,7 +4,6 @@ import { Locale } from "@/shared/types";
 import { getDictionary } from "@/shared/config/i18n";
 import { projectsData } from "@/modules/projects/data/projects";
 import { Container } from "@/shared/ui/container";
-import { Badge } from "@/shared/ui/badge";
 import { ArrowRight, Layers, ShieldCheck } from "lucide-react";
 
 export function SelectedWork({ locale }: { locale: Locale }) {
@@ -15,19 +14,24 @@ export function SelectedWork({ locale }: { locale: Locale }) {
     <section className="py-20 border-b border-border-subtle bg-canvas">
       <Container size="wide">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div className="space-y-2">
-            <Badge variant="accent">{dict.selectedWork.badge}</Badge>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-100 font-display">
-              {dict.selectedWork.title}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-400 max-w-2xl">
+          <div className="space-y-3">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand">
+              {dict.selectedWork.badge}
+            </span>
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-10 bg-brand rounded-full shrink-0" />
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-100 font-display">
+                {dict.selectedWork.title}
+              </h2>
+            </div>
+            <p className="text-sm sm:text-base text-slate-400 max-w-2xl pl-6">
               {dict.selectedWork.subtitle}
             </p>
           </div>
 
           <Link
             href={`/${locale}/projects`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-sky-300 transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-brand hover:text-brand-hover transition-colors"
           >
             <span>{dict.selectedWork.viewAll}</span>
             <ArrowRight className="h-4 w-4" />

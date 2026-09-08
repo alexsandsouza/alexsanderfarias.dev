@@ -8,7 +8,7 @@ import { navigationItems } from "@/shared/config/navigation";
 import { getDictionary } from "@/shared/config/i18n";
 import { LanguageSwitcher } from "./language-switcher";
 import { Container } from "@/shared/ui/container";
-import { Menu, X, Terminal } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
 
 export function Header({ locale }: { locale: Locale }) {
@@ -17,24 +17,23 @@ export function Header({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border-subtle bg-canvas/85 backdrop-blur-md transition-colors">
+    <header className="sticky top-0 z-40 w-full border-b border-border-subtle bg-canvas/90 backdrop-blur-md transition-colors">
       <Container size="wide">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo / Marca */}
+          {/* Logo / Marca estilo hustle_tech */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-slate-100 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-1"
+            className="flex items-center gap-1 font-mono text-base font-bold tracking-tight text-slate-100 hover:text-white transition-colors focus-visible:outline-none rounded-sm"
           >
-            <Terminal className="h-4 w-4 text-accent" />
-            <span>
-              alexsanderfarias<span className="text-accent">.dev</span>
-            </span>
+            <span>alexsander</span>
+            <span className="text-brand font-black">_</span>
+            <span>farias</span>
           </Link>
 
           {/* Navegação Desktop */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden xl:flex items-center gap-1 text-sm font-medium text-slate-300"
+            className="hidden xl:flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-slate-400"
           >
             {navigationItems.map((item) => {
               const fullHref = item.href === "/" ? `/${locale}` : `/${locale}${item.href}`;
@@ -50,10 +49,10 @@ export function Header({ locale }: { locale: Locale }) {
                   key={item.key}
                   href={fullHref}
                   className={cn(
-                    "px-2.5 py-1.5 rounded-md transition-all text-xs font-medium tracking-wide",
+                    "px-3 py-1.5 rounded transition-all font-semibold",
                     isActive
-                      ? "text-accent bg-accent/10 border border-accent/20 font-semibold"
-                      : "text-slate-400 hover:text-slate-100 hover:bg-surface-elevated"
+                      ? "text-slate-100 border-b-2 border-brand"
+                      : "hover:text-slate-200"
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -63,9 +62,17 @@ export function Header({ locale }: { locale: Locale }) {
             })}
           </nav>
 
-          {/* Ações à Direita: Switcher de Idioma & Mobile Toggle */}
-          <div className="flex items-center gap-3">
-            <LanguageSwitcher currentLocale={locale} />
+          {/* Controles: Idioma + Ação */}
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex items-center gap-4">
+              <LanguageSwitcher currentLocale={locale} />
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center justify-center px-4 py-2 rounded bg-brand hover:bg-brand-hover text-white text-xs font-mono font-bold tracking-widest uppercase shadow-sm transition-all"
+              >
+                Falar Comigo
+              </Link>
+            </div>
 
             {/* Botão Hambúrguer Mobile */}
             <button

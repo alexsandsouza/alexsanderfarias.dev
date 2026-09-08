@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Locale } from "@/shared/types";
 import { getDictionary } from "@/shared/config/i18n";
 import { Container } from "@/shared/ui/container";
-import { Badge } from "@/shared/ui/badge";
 import { ArrowRight, Terminal, Shield, Network, GraduationCap } from "lucide-react";
 
 export function Manifesto({ locale }: { locale: Locale }) {
@@ -14,23 +13,28 @@ export function Manifesto({ locale }: { locale: Locale }) {
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <Badge variant="accent">{dict.homeManifesto.badge}</Badge>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-100 font-display leading-tight">
-              {dict.homeManifesto.title}
-            </h2>
-            <p className="text-base text-slate-300 leading-relaxed">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand">
+              {dict.homeManifesto.badge}
+            </span>
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-10 bg-brand rounded-full shrink-0" />
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-100 font-display leading-tight">
+                {dict.homeManifesto.title}
+              </h2>
+            </div>
+            <p className="text-base text-slate-300 leading-relaxed pl-6">
               {dict.homeManifesto.p1}
             </p>
-            <p className="text-base text-slate-400 leading-relaxed">
+            <p className="text-base text-slate-400 leading-relaxed pl-6">
               {dict.homeManifesto.p2}
             </p>
 
-            <div className="pt-2">
+            <div className="pt-2 pl-6">
               <Link
                 href={`/${locale}/about`}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-sky-300 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-hover transition-colors font-mono"
               >
-                <span>Conhecer biografia e filosofia completa</span>
+                <span>Conhecer biografia e trajetória completa</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Locale } from "@/shared/types";
 import { getExperienceHistory } from "../services/experience.service";
 import { Container } from "@/shared/ui/container";
-import { Badge } from "@/shared/ui/badge";
 import {
   Briefcase,
   GraduationCap,
@@ -12,7 +11,6 @@ import {
   ChevronDown,
   ChevronUp,
   CheckCircle2,
-  Info,
 } from "lucide-react";
 
 export function ExperienceTimeline({ locale }: { locale: Locale }) {
@@ -27,26 +25,26 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
   return (
     <div className="py-16 sm:py-24">
       <Container size="wide">
-        {/* Cabeçalho */}
-        <div className="space-y-4 max-w-3xl mb-16">
-          <Badge variant="accent">
-            {isPt ? "Trajetória Profissional" : "Career Path"}
-          </Badge>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
-            {isPt ? "Experiência de Engenharia & Docência" : "Engineering & Teaching Experience"}
-          </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-            {isPt
-              ? "Atuação consolidada em arquitetura de software corporativa, desenvolvimento full stack e formação acadêmica de nível superior."
-              : "Demonstrated track record across enterprise software architecture, full-stack development, and university-level computer science education."}
-          </p>
-
-          <div className="inline-flex items-center gap-2 p-3 rounded-lg bg-surface border border-border-subtle text-xs font-mono text-slate-400">
-            <Info className="h-4 w-4 text-accent" />
-            <span>
-              &lt;TODO: Alexsander fornecer nomes oficiais das empresas e instituições de atuação corporativa&gt;
+        {/* Cabeçalho no padrão HustleTech: Marcador vertical vermelho + Título contundente */}
+        <div className="space-y-4 max-w-4xl mb-16">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-brand">
+              {isPt ? "EXPERIÊNCIA" : "EXPERIENCE"}
             </span>
           </div>
+
+          <div className="flex items-center gap-4">
+            <div className="w-1.5 h-10 bg-brand rounded-full shrink-0" />
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-100 font-display">
+              {isPt ? "Onde o trabalho aconteceu." : "Where the work took place."}
+            </h1>
+          </div>
+
+          <p className="text-base text-slate-400 pl-6">
+            {isPt
+              ? "Posições consolidadas em desenvolvimento Full Stack, docência de ensino superior e consultoria de empreendedorismo digital."
+              : "Track record across full-stack engineering, university leadership, and digital entrepreneurship consulting."}
+          </p>
         </div>
 
         {/* Timeline Estruturada */}
@@ -119,7 +117,7 @@ export function ExperienceTimeline({ locale }: { locale: Locale }) {
                           : exp.responsibilities.slice(0, 2)
                         ).map((resp, i) => (
                           <li key={i} className="flex items-start gap-2.5">
-                            <span className="text-accent mt-1 text-xs">▹</span>
+                            <span className="text-brand mt-0.5 text-sm">▪</span>
                             <span>{resp}</span>
                           </li>
                         ))}
