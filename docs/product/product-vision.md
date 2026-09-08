@@ -1,7 +1,7 @@
-# Product Vision: alexsanderfarias.dev
+# Product Vision: alexsanderfarias-dev.vercel.app
 
 ## 1. Visão Geral Executiva
-O projeto **alexsanderfarias.dev** é uma plataforma digital de engenharia de software e posicionamento de autoridade profissional para **Alexsander Farias**. Mais do que um portfólio convencional ou currículo estático, o projeto é concebido como um artefato técnico de demonstração prática de competências em:
+O projeto **alexsanderfarias-dev.vercel.app** é uma plataforma digital de engenharia de software e posicionamento de autoridade profissional para **Alexsander Farias**. Mais do que um portfólio convencional ou currículo estático, o projeto é concebido como um artefato técnico de demonstração prática de competências em:
 
 - **Engenharia de Software & Arquitetura**
 - **Desenvolvimento Full Stack Moderno**
