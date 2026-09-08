@@ -18,7 +18,7 @@ $$\text{AUTORIDADE} + \text{ENGENHARIA} + \text{TECNOLOGIA} + \text{PESQUISA} + 
 
 ### Core Headline
 > **"I build software. I teach technology. I research what comes next."**  
-> *Alexsander Farias — Software Engineer · Professor · Researcher · Builder*
+> *Alexsander Farias - Software Engineer · Professor · Researcher · Builder*
 
 ## 3. Proposta de Valor por Audiência
 1. **Líderes de Engenharia & Recrutadores Técnicos:** Constatam profundidade em decisões de arquitetura, modularidade, resiliência, segurança e qualidade de código através de case studies fundamentados.
