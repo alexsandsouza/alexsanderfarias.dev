@@ -2,7 +2,7 @@
 
 ## 1. Identificação do Projeto
 - **Nome do Sistema:** Portfólio Profissional & Hub Acadêmico Alexsander Farias
-- **Domínio Primário:** `https://alexsanderfarias.dev`
+- **Domínio Primário:** `https://alexsanderfarias-dev.vercel.app
 - **Ambiente de Execução:** Next.js App Router no Vercel Edge Network
 - **Paradigma Arquitetural:** Modular Monolith orientado a recursos/domínios
 
