@@ -3,8 +3,8 @@ export const siteConfig = {
   title: "Alexsander Farias | Desenvolvedor Full Stack · Professor Universitário · Empreendedorismo Digital",
   description:
     "Portfólio profissional de Alexsander Farias. Desenvolvedor Full Stack, Professor Universitário e especialista em Desenvolvimento de Projetos de Empreendedorismo Digital e Engenharia de Software.",
-  url: "https://alexsanderfarias.vercel.app",
-  ogImage: "https://alexsanderfarias.vercel.app/og.png",
+  url: "https://alexsanderfarias-dev.vercel.app",
+  ogImage: "https://alexsanderfarias-dev.vercel.app/og.png",
   links: {
     github: "https://github.com/alexsandsouza",
     linkedin: "https://linkedin.com/in/alexsanderfarias",
