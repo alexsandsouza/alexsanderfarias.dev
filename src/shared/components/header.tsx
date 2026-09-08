@@ -30,10 +30,10 @@ export function Header({ locale }: { locale: Locale }) {
             <span>farias</span>
           </Link>
 
-          {/* Navegação Desktop */}
+          {/* Navegação Desktop Limpa (4 menus essenciais) */}
           <nav
             aria-label="Navegação Principal"
-            className="hidden xl:flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-slate-400"
+            className="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold"
           >
             {navigationItems.map((item) => {
               const fullHref = item.href === "/" ? `/${locale}` : `/${locale}${item.href}`;
@@ -49,10 +49,10 @@ export function Header({ locale }: { locale: Locale }) {
                   key={item.key}
                   href={fullHref}
                   className={cn(
-                    "px-3 py-1.5 rounded transition-all font-semibold",
+                    "py-1 transition-colors hover:text-slate-100",
                     isActive
-                      ? "text-slate-100 border-b-2 border-brand"
-                      : "hover:text-slate-200"
+                      ? "text-slate-100 border-b-2 border-brand font-bold"
+                      : "text-slate-400"
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -63,21 +63,19 @@ export function Header({ locale }: { locale: Locale }) {
           </nav>
 
           {/* Controles: Idioma + Ação */}
-          <div className="flex items-center gap-4">
-            <div className="hidden sm:flex items-center gap-4">
-              <LanguageSwitcher currentLocale={locale} />
-              <Link
-                href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center px-4 py-2 rounded bg-brand hover:bg-brand-hover text-white text-xs font-mono font-bold tracking-widest uppercase shadow-sm transition-all"
-              >
-                Falar Comigo
-              </Link>
-            </div>
+          <div className="flex items-center gap-3 sm:gap-4">
+            <LanguageSwitcher currentLocale={locale} />
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex items-center justify-center px-4 py-2 rounded bg-brand hover:bg-brand-hover text-white text-xs font-mono font-bold tracking-widest uppercase shadow-sm transition-all active:scale-[0.98]"
+            >
+              Falar Comigo
+            </Link>
 
             {/* Botão Hambúrguer Mobile */}
             <button
               type="button"
-              className="xl:hidden p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="md:hidden p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-surface-elevated focus-visible:outline-none"
               aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -90,7 +88,7 @@ export function Header({ locale }: { locale: Locale }) {
 
       {/* Menu Mobile Dropdown */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-b border-border-subtle bg-surface px-4 pt-3 pb-6 animate-in slide-in-from-top-2">
+        <div className="md:hidden border-b border-border-subtle bg-surface px-4 pt-3 pb-6 animate-in slide-in-from-top-2">
           <nav aria-label="Navegação Mobile" className="grid grid-cols-2 gap-2">
             {navigationItems.map((item) => {
               const fullHref = item.href === "/" ? `/${locale}` : `/${locale}${item.href}`;
